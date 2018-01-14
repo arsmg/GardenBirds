@@ -1,13 +1,34 @@
 <resources>
-    <string name="app_name">Garden Birds Quiz</string>
-    <string name="Welcome">Welcome to the Garden Birds of Europe Quiz!</string>
-    <string name="ByPicture">Recognize species by picture</string>
     <string name="BySong">Recognize species by song</string>
-    <string name="Question_picture">Which is that bird?</string>
+
+    <string name="app_name">Garden Birds Quiz</string>
+
+    <!-- Species -->
     <string name="GreatTit">Great tit</string>
     <string name="Nuthach">Nuthach</string>
     <string name="Finch">Chaffinch</string>
     <string name="Goldfinch">Goldfinch</string>
+    <string name="Bluetit">Blue tit</string>
+    <string name="Blackbird">Blackbird</string>
+    <string name="Starling">Starling</string>
+
+    <!-- editText -->
+    <string name="editSuggestion">Enter suggestion here</string>
+
+    <!-- Questions -->
+    <string name="Question_checkbox">Which bird species are presented on the picture?</string>
+    <string name="Question_picture">Which is that bird?</string>
+    <string name="Question_edittext">Which is the name of the bird?</string>
+
+    <!-- First activity -->
+    <string name="Welcome">Welcome to the Garden Birds of Europe Quiz!</string>
+    <string name="ByPicture">Recognize species by picture</string>
+
+    <!-- Toast -->
+    <string name="result_summery">Your score is: </string>
     <string name="wrong_answer">This answer is wrong!</string>
+
+    <!-- Button -->
     <string name="submit_button">submit</string>
+
 </resources>

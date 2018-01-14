@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:fillViewport="true">
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.android.gardenbirdsquiz.ByPicture">
 
+    <!-- First question -->
     <TextView
         style="@style/TextView_question"
         android:text="@string/Question_picture"/>
@@ -17,34 +23,139 @@
         style="@style/Image" />
 
    <RadioGroup
-       android:id="@+id/radioGroup"
-       style="@style/Checkbox">
+       android:id="@+id/firstQuestion"
+       style="@style/QuestionStyle">
+
        <RadioButton
-           style="@style/Checkbox"
-           android:id="@+id/radiobutton1"
+           style="@style/QuestionStyle"
+           android:id="@+id/question1answer1"
            android:text="@string/Finch"
-           android:onClick="firstRadioButtons"
            />
        <RadioButton
-           style="@style/Checkbox"
-           android:id="@+id/radiobutton2"
+           style="@style/QuestionStyle"
+           android:id="@+id/question1answer2"
            android:text="@string/GreatTit"
-           android:onClick="firstRadioButtons"
            />
        <RadioButton
-           style="@style/Checkbox"
-           android:id="@+id/radiobutton3"
+           style="@style/QuestionStyle"
+           android:id="@+id/question1answer3"
            android:text="@string/Goldfinch"
-           android:onClick="firstRadioButtons"
            />
        <RadioButton
-           style="@style/Checkbox"
-           android:id="@+id/radiobutton4"
+           style="@style/QuestionStyle"
+           android:id="@+id/question1answer4"
            android:text="@string/Nuthach"
-           android:onClick="firstRadioButtons"
            />
+
    </RadioGroup>
 
+    <!-- Second question -->
+    <TextView
+        style="@style/TextView_question"
+        android:text="@string/Question_picture"/>
+
+    <ImageView
+        style="@style/Image" />
+
+    <RadioGroup
+        android:id="@+id/secondQuestion"
+        style="@style/QuestionStyle">
+
+        <RadioButton
+            style="@style/QuestionStyle"
+            android:id="@+id/question2answer1"
+            android:text="@string/Blackbird"
+            />
+        <RadioButton
+            style="@style/QuestionStyle"
+            android:id="@+id/question2answer2"
+            android:text="@string/Bluetit"
+            />
+        <RadioButton
+            style="@style/QuestionStyle"
+            android:id="@+id/question2answer3"
+            android:text="@string/Goldfinch"
+            />
+        <RadioButton
+            style="@style/QuestionStyle"
+            android:id="@+id/question2answer4"
+            android:text="@string/Starling"
+
+            />
+    </RadioGroup>
+
+    <!-- Question 3 -->
+    <TextView
+        style="@style/TextView_question"
+        android:text="@string/Question_picture"/>
+
+    <ImageView
+        style="@style/Image" />
+
+    <RadioGroup
+        android:id="@+id/thirdQuestion"
+        style="@style/QuestionStyle">
+
+        <RadioButton
+            style="@style/QuestionStyle"
+            android:id="@+id/question3answer1"
+            android:text="@string/Bluetit"
+            />
+        <RadioButton
+            style="@style/QuestionStyle"
+            android:id="@+id/question3answer2"
+            android:text="@string/Goldfinch"
+            />
+        <RadioButton
+            style="@style/QuestionStyle"
+            android:id="@+id/question3answer3"
+            android:text="@string/Nuthach"
+            />
+        <RadioButton
+            style="@style/QuestionStyle"
+            android:id="@+id/question3answer4"
+            android:text="@string/Starling"
+            />
+    </RadioGroup>
+<!-- Question 4 -->
+    <TextView
+        style="@style/TextView_question"
+        android:text="@string/Question_checkbox"/>
+
+    <ImageView
+        style="@style/Image" />
+
+    <CheckBox
+        style="@style/QuestionStyle"
+        android:text="@string/Blackbird"
+        android:id="@+id/question4answer1"
+        />
+    <CheckBox
+        style="@style/QuestionStyle"
+        android:text="@string/Bluetit"
+        android:id="@+id/question4answer2"
+        />
+    <CheckBox
+        style="@style/QuestionStyle"
+        android:text="@string/Finch"
+        android:id="@+id/question4answer3"
+        />
+    <CheckBox
+        style="@style/QuestionStyle"
+        android:text="@string/Nuthach"
+        android:id="@+id/question4answer4"
+        />
+<!-- Question 5 -->
+    <TextView
+        style="@style/TextView_question"
+        android:text="@string/Question_edittext"/>
+    <EditText
+        android:id="@+id/question5answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/editSuggestion"/>
+
+<!-- Submit part -->
     <TextView
         android:id="@+id/score"
         android:layout_width="wrap_content"
@@ -56,6 +167,8 @@
         android:id="@+id/submit"
         android:onClick="submitAnswer"
         style="@style/button"
-        android:text="@string/submit_button"/>
+        android:text="@string/submit_button"
+        />
 
 </LinearLayout>
+</ScrollView>
