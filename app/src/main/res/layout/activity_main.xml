@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.gardenbirdsquiz.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Welcome"
+        />
+
+    <TextView
+        android:id="@+id/picturesQuiz"
+        style="@style/TextView_first_page"
+        android:text="@string/ByPicture"
+        android:background="@color/colorPrimary"
+        />
+
+    <TextView
+        android:id="@+id/songsQuiz"
+        style="@style/TextView_first_page"
+        android:text="@string/BySong"
+        android:background="@color/colorAccent"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

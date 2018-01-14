@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.gardenbirdsquiz.ByPicture">
+
+    <TextView
+        style="@style/TextView_question"
+        android:text="@string/Question_picture"/>
+
+    <ImageView
+        style="@style/Image" />
+
+   <RadioGroup
+       android:id="@+id/radioGroup"
+       style="@style/Checkbox">
+       <RadioButton
+           style="@style/Checkbox"
+           android:id="@+id/radiobutton1"
+           android:text="@string/Finch"
+           android:onClick="firstRadioButtons"
+           />
+       <RadioButton
+           style="@style/Checkbox"
+           android:id="@+id/radiobutton2"
+           android:text="@string/GreatTit"
+           android:onClick="firstRadioButtons"
+           />
+       <RadioButton
+           style="@style/Checkbox"
+           android:id="@+id/radiobutton3"
+           android:text="@string/Goldfinch"
+           android:onClick="firstRadioButtons"
+           />
+       <RadioButton
+           style="@style/Checkbox"
+           android:id="@+id/radiobutton4"
+           android:text="@string/Nuthach"
+           android:onClick="firstRadioButtons"
+           />
+   </RadioGroup>
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        />
+
+    <Button
+        android:id="@+id/submit"
+        android:onClick="submitAnswer"
+        style="@style/button"
+        android:text="@string/submit_button"/>
+
+</LinearLayout>

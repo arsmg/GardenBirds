@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Garden Birds Quiz</string>
+    <string name="Welcome">Welcome to the Garden Birds of Europe Quiz!</string>
+    <string name="ByPicture">Recognize species by picture</string>
+    <string name="BySong">Recognize species by song</string>
+    <string name="Question_picture">Which is that bird?</string>
+    <string name="GreatTit">Great tit</string>
+    <string name="Nuthach">Nuthach</string>
+    <string name="Finch">Chaffinch</string>
+    <string name="Goldfinch">Goldfinch</string>
+    <string name="wrong_answer">This answer is wrong!</string>
+    <string name="submit_button">submit</string>
+</resources>
