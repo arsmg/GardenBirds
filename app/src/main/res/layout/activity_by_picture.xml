@@ -9,8 +9,7 @@
     android:fillViewport="true">
 
 <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    style="@style/Linear_layout"
     android:orientation="vertical"
     tools:context="com.example.android.gardenbirdsquiz.ByPicture">
 
@@ -163,12 +162,22 @@
         android:text="0"
         />
 
+    <LinearLayout
+        style="@style/Linear_layout">
+
     <Button
         android:id="@+id/submit"
         android:onClick="submitAnswer"
         style="@style/button"
         android:text="@string/submit_button"
         />
+
+    <Button
+        style="@style/button"
+        android:id="@+id/reset_button"
+        android:text="@string/reset_button"/>
+
+    </LinearLayout>
 
 </LinearLayout>
 </ScrollView>

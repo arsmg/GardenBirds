@@ -1,5 +1,6 @@
 package com.example.android.gardenbirdsquiz;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -24,6 +25,8 @@ public class ByPicture extends AppCompatActivity {
     private CheckBox checkBox4;
     private EditText editText1;
     private Button submitButton;
+    private Button resetButton;
+
 
     int basescore = 0;
     int count = 0;
@@ -48,81 +51,66 @@ public class ByPicture extends AppCompatActivity {
 
     public void submitAnswer (View view) {
 
-        // I am checking if the right answer to Question 1 was given
+        count++;
+
+
         int question1_id = radioQuestion1.getCheckedRadioButtonId();
+
+        // I am checking if question 1 is answered
+        if (question1_id == -1) {
+            basescore = 0;
+            return;
+        }
+
+        // I am checking if the right answer to Question 1 was given
         RadioButton radioButton1 = (RadioButton) radioQuestion1.findViewById(question1_id);
         String answer1_text = (String) radioButton1.getText();
         if (answer1_text.equalsIgnoreCase(getString(R.string.Goldfinch))) {
-            basescore ++;
+            basescore++;
         }
 
         // I am checking if the right answer to Question 2 was given
         int question2_id = radioQuestion1.getCheckedRadioButtonId();
+
+        // I am checking if question 2 is answered
+        if (question2_id == -1) {
+           basescore = 0;
+            return;
+        }
         RadioButton radioButton2 = (RadioButton) radioQuestion2.findViewById(question2_id);
         String answer2_text = (String) radioButton1.getText();
         if (answer1_text.equalsIgnoreCase(getString(R.string.Bluetit))) {
-            basescore ++;
+            basescore++;
         }
 
         // I am checking if the right answer to Question 3 was given
         int question3_id = radioQuestion1.getCheckedRadioButtonId();
+
+        // I am checking if question 3 is answered
+        if (question3_id == -1) {
+            basescore = 0;
+            return;
+        }
         RadioButton radioButton3 = (RadioButton) radioQuestion3.findViewById(question3_id);
         String answer3_text = (String) radioButton1.getText();
         if (answer1_text.equalsIgnoreCase(getString(R.string.Bluetit))) {
-            basescore ++;
+            basescore++;
         }
 
         // I am checking if the right answer to Question 4 was given
-        if (checkBox1.isChecked() && checkBox3.isChecked()){
-            basescore +=2;
-        }
-        else if(checkBox1.isChecked() || checkBox3.isChecked()) {
-            basescore ++;
+        if (checkBox1.isChecked() && checkBox3.isChecked()) {
+            basescore += 2;
+        } else if (checkBox1.isChecked() || checkBox3.isChecked()) {
+            basescore++;
         }
 
         // Toast message with the score
-         Toast.makeText(this, getString(R.string.result_summery) + basescore, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getString(R.string.result_summery) + basescore, Toast.LENGTH_SHORT).show();
 
-       if (submitButton.isClickable()){
-            count ++;
+        // Switch off Submit button after first submit
+        if (count >= 1) {
+            submitButton.setEnabled(false);
         }
-
-        if(count > 1 && count < 1000){
-            Toast.makeText(this, getString(R.string.wrong_answer), Toast.LENGTH_SHORT).show();
-        }
-
-        }
-
-
-    /*
-    private int calculateScore(boolean radioButton1Checked, boolean radioButton2Checked,
-                           boolean radioButton3Checked, boolean radioButton4Checked){
-
-        if(radioButton1Checked) {
-            count++;
-            basescore++;
-        }
-        if(radioButton2Checked){
-            Toast.makeText(getApplicationContext(), "Wrong", Toast.LENGTH_SHORT).show();
-        }
-        if(radioButton3Checked){
-            Toast.makeText(getApplicationContext(), "Wrong", Toast.LENGTH_SHORT).show();
-        }
-        if(radioButton4Checked){
-            Toast.makeText(getApplicationContext(), "Wrong", Toast.LENGTH_SHORT).show();
-        }
-        return (basescore);
     }
-
-    private String scoreSummery (int score) {
-            String scoreMessage = "Customer" + score;
-            return scoreMessage;
-    }
-
-
-    private void displayMessage(String scoreMessage) {
-        TextView orderSummeryTextView = (TextView) findViewById(R.id.score);
-        orderSummeryTextView.setText(scoreMessage);
-    } */
 
 }

@@ -8,6 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Linear_layout">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
     <style name="TextView_first_page">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>

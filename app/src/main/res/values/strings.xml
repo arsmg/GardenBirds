@@ -24,11 +24,13 @@
     <string name="Welcome">Welcome to the Garden Birds of Europe Quiz!</string>
     <string name="ByPicture">Recognize species by picture</string>
 
-    <!-- Toast -->
+    <!-- Toasts -->
+    <string name="blank_question">You have not answered all the questions!</string>
     <string name="result_summery">Your score is: </string>
     <string name="wrong_answer">This answer is wrong!</string>
 
-    <!-- Button -->
+    <!-- Buttons -->
     <string name="submit_button">submit</string>
+    <string name="reset_button">reset</string>
 
 </resources>
