@@ -45,6 +45,7 @@ public class ByPicture extends AppCompatActivity {
         checkBox4 = (CheckBox) findViewById(R.id.question4answer4);
         editText1 = (EditText) findViewById(R.id.question5answer);
         submitButton = (Button) findViewById(R.id.submit);
+        resetButton = (Button) findViewById(R.id.reset_button);
 
     }
 
@@ -56,6 +57,7 @@ public class ByPicture extends AppCompatActivity {
 
         int question1_id = radioQuestion1.getCheckedRadioButtonId();
 
+
         // I am checking if question 1 is answered
         if (question1_id == -1) {
             basescore = 0;
@@ -66,11 +68,12 @@ public class ByPicture extends AppCompatActivity {
         RadioButton radioButton1 = (RadioButton) radioQuestion1.findViewById(question1_id);
         String answer1_text = (String) radioButton1.getText();
         if (answer1_text.equalsIgnoreCase(getString(R.string.Goldfinch))) {
+            count++;
             basescore++;
         }
 
         // I am checking if the right answer to Question 2 was given
-        int question2_id = radioQuestion1.getCheckedRadioButtonId();
+        int question2_id = radioQuestion2.getCheckedRadioButtonId();
 
         // I am checking if question 2 is answered
         if (question2_id == -1) {
@@ -78,13 +81,14 @@ public class ByPicture extends AppCompatActivity {
             return;
         }
         RadioButton radioButton2 = (RadioButton) radioQuestion2.findViewById(question2_id);
-        String answer2_text = (String) radioButton1.getText();
-        if (answer1_text.equalsIgnoreCase(getString(R.string.Bluetit))) {
+        String answer2_text = (String) radioButton2.getText();
+        if (answer2_text.equalsIgnoreCase(getString(R.string.Bluetit))) {
+            count++;
             basescore++;
         }
 
         // I am checking if the right answer to Question 3 was given
-        int question3_id = radioQuestion1.getCheckedRadioButtonId();
+        int question3_id = radioQuestion3.getCheckedRadioButtonId();
 
         // I am checking if question 3 is answered
         if (question3_id == -1) {
@@ -92,8 +96,9 @@ public class ByPicture extends AppCompatActivity {
             return;
         }
         RadioButton radioButton3 = (RadioButton) radioQuestion3.findViewById(question3_id);
-        String answer3_text = (String) radioButton1.getText();
-        if (answer1_text.equalsIgnoreCase(getString(R.string.Bluetit))) {
+        String answer3_text = (String) radioButton3.getText();
+        if (answer3_text.equalsIgnoreCase(getString(R.string.Bluetit))) {
+            count++;
             basescore++;
         }
 
@@ -101,7 +106,16 @@ public class ByPicture extends AppCompatActivity {
         if (checkBox1.isChecked() && checkBox3.isChecked()) {
             basescore += 2;
         } else if (checkBox1.isChecked() || checkBox3.isChecked()) {
+            count++;
             basescore++;
+        }
+
+        // I am checking if the right answer to Question 5 was given
+        String edittexttest = editText1.getText().toString();
+
+        if (edittexttest.equalsIgnoreCase(getString(R.string.editTextRightAnswer))){
+            count++;
+            basescore +=3;
         }
 
         // Toast message with the score
@@ -111,6 +125,8 @@ public class ByPicture extends AppCompatActivity {
         if (count >= 1) {
             submitButton.setEnabled(false);
         }
+
+
     }
 
 }

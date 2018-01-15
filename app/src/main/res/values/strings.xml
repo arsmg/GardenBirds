@@ -14,11 +14,12 @@
 
     <!-- editText -->
     <string name="editSuggestion">Enter suggestion here</string>
+    <string name="editTextRightAnswer">Turdus merula</string>
 
     <!-- Questions -->
     <string name="Question_checkbox">Which bird species are presented on the picture?</string>
     <string name="Question_picture">Which is that bird?</string>
-    <string name="Question_edittext">Which is the name of the bird?</string>
+    <string name="Question_edittext">What is the name of that bird in latin?</string>
 
     <!-- First activity -->
     <string name="Welcome">Welcome to the Garden Birds of Europe Quiz!</string>
