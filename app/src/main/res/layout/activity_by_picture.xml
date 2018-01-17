@@ -173,6 +173,7 @@
         />
 
     <Button
+        android:onClick="reset"
         style="@style/button"
         android:id="@+id/reset_button"
         android:text="@string/reset_button"/>

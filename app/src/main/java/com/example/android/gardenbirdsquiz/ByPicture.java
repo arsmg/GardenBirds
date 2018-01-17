@@ -1,10 +1,12 @@
 package com.example.android.gardenbirdsquiz;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -25,7 +27,7 @@ public class ByPicture extends AppCompatActivity {
     private CheckBox checkBox4;
     private EditText editText1;
     private Button submitButton;
-    private Button resetButton;
+
 
 
     int basescore = 0;
@@ -34,6 +36,7 @@ public class ByPicture extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         setContentView(R.layout.activity_by_picture);
 
         radioQuestion1 = (RadioGroup) findViewById(R.id.firstQuestion);
@@ -45,7 +48,6 @@ public class ByPicture extends AppCompatActivity {
         checkBox4 = (CheckBox) findViewById(R.id.question4answer4);
         editText1 = (EditText) findViewById(R.id.question5answer);
         submitButton = (Button) findViewById(R.id.submit);
-        resetButton = (Button) findViewById(R.id.reset_button);
 
     }
 
@@ -56,8 +58,6 @@ public class ByPicture extends AppCompatActivity {
 
 
         int question1_id = radioQuestion1.getCheckedRadioButtonId();
-
-
         // I am checking if question 1 is answered
         if (question1_id == -1) {
             basescore = 0;
@@ -125,8 +125,44 @@ public class ByPicture extends AppCompatActivity {
         if (count >= 1) {
             submitButton.setEnabled(false);
         }
+    }
 
+    public void reset(View view) {
+                AlertDialog.Builder altdial = new AlertDialog.Builder(ByPicture.this);
+                altdial.setMessage(getString(R.string.java_reset_alert)).setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
 
+                                // reset score
+                                basescore =  0;
+                                count = 0;
+
+                                // reset radio buttons
+                                radioQuestion1.clearCheck();
+                                radioQuestion2.clearCheck();
+                                radioQuestion3.clearCheck();
+
+                                checkBox1.setChecked(false);
+                                checkBox2.setChecked(false);
+                                checkBox3.setChecked(false);
+                                checkBox4.setChecked(false);
+
+                                editText1.setText("");
+
+                                submitButton.setEnabled(true);
+
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.cancel();
+                            }
+                        });
+                AlertDialog alert = altdial.create();
+                alert.setTitle("Reset");
+                alert.show();
     }
 
 }

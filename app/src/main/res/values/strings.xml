@@ -33,5 +33,6 @@
     <!-- Buttons -->
     <string name="submit_button">submit</string>
     <string name="reset_button">reset</string>
+    <string name="java_reset_alert">Do you want to try again?</string>
 
 </resources>
