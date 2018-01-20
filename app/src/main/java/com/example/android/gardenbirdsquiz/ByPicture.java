@@ -1,10 +1,13 @@
 package com.example.android.gardenbirdsquiz;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -49,6 +52,30 @@ public class ByPicture extends AppCompatActivity {
         editText1 = (EditText) findViewById(R.id.question5answer);
         submitButton = (Button) findViewById(R.id.submit);
 
+
+    }
+
+    public void info(View view) {
+        AlertDialog.Builder altdial = new AlertDialog.Builder(ByPicture.this);
+        altdial.setMessage(getString(R.string.info_list1) + "\n" + "\n"+ getString(R.string.info_list2)
+                + "\n"+ getString(R.string.info_list3)+ "\n"+ getString(R.string.info_list4)
+                + "\n"+ getString(R.string.info_list5)+ "\n"+ "\n"+ getString(R.string.info_list6)
+                + "\n"+ "\n" + getString(R.string.info_list7)).setCancelable(false)
+                .setPositiveButton("", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                })
+                .setNegativeButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+        AlertDialog alert = altdial.create();
+        alert.setTitle("Greatings");
+        alert.show();
     }
 
 
@@ -60,6 +87,7 @@ public class ByPicture extends AppCompatActivity {
         int question1_id = radioQuestion1.getCheckedRadioButtonId();
         // I am checking if question 1 is answered
         if (question1_id == -1) {
+            Toast.makeText(this, getString(R.string.blank_question), Toast.LENGTH_SHORT).show();
             basescore = 0;
             return;
         }
@@ -77,6 +105,7 @@ public class ByPicture extends AppCompatActivity {
 
         // I am checking if question 2 is answered
         if (question2_id == -1) {
+            Toast.makeText(this, getString(R.string.blank_question), Toast.LENGTH_SHORT).show();
            basescore = 0;
             return;
         }
@@ -92,6 +121,7 @@ public class ByPicture extends AppCompatActivity {
 
         // I am checking if question 3 is answered
         if (question3_id == -1) {
+            Toast.makeText(this, getString(R.string.blank_question), Toast.LENGTH_SHORT).show();
             basescore = 0;
             return;
         }
@@ -138,18 +168,21 @@ public class ByPicture extends AppCompatActivity {
                                 basescore =  0;
                                 count = 0;
 
-                                // reset radio buttons
+                                // reset radio buttons of questions 1-3
                                 radioQuestion1.clearCheck();
                                 radioQuestion2.clearCheck();
                                 radioQuestion3.clearCheck();
 
+                                // reset checkboxes of question 4
                                 checkBox1.setChecked(false);
                                 checkBox2.setChecked(false);
                                 checkBox3.setChecked(false);
                                 checkBox4.setChecked(false);
 
+                                // clear text of question 5
                                 editText1.setText("");
 
+                                // enables submit button to be used again
                                 submitButton.setEnabled(true);
 
                             }

@@ -162,23 +162,28 @@
         android:text="0"
         />
 
-    <LinearLayout
-        style="@style/Linear_layout">
+    <RelativeLayout style="@style/Linear_layout">
 
-    <Button
-        android:id="@+id/submit"
-        android:onClick="submitAnswer"
-        style="@style/button"
-        android:text="@string/submit_button"
-        />
+        <Button
+            android:id="@+id/submit"
+            style="@style/button"
+            android:layout_alignParentLeft="true"
+            android:onClick="submitAnswer"
+            android:text="@string/submit_button" />
 
-    <Button
-        android:onClick="reset"
-        style="@style/button"
-        android:id="@+id/reset_button"
-        android:text="@string/reset_button"/>
+        <Button
+            android:id="@+id/reset_button"
+            style="@style/button"
+            android:layout_centerInParent="true"
+            android:onClick="reset"
+            android:text="@string/reset_button" />
 
-    </LinearLayout>
+        <Button
+            android:onClick="info"
+            style="@style/button"
+            android:layout_alignParentRight="true"
+            android:text="@string/info_button"/>
 
+    </RelativeLayout>
 </LinearLayout>
 </ScrollView>
