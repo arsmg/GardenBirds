@@ -4,19 +4,19 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="wrap_content"
     android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:fillViewport="true">
 
 <LinearLayout
     style="@style/Linear_layout"
     android:orientation="vertical"
-    tools:context="com.example.android.gardenbirdsquiz.ByPicture">
+    tools:context="com.example.android.gardenbirdsquiz.quiz_activity">
 
     <!-- First question -->
     <TextView
         style="@style/TextView_question"
-        android:text="@string/Question_picture"/>
+        android:text="@string/Question_1"/>
 
     <ImageView
         style="@style/Image" />
@@ -26,23 +26,23 @@
        style="@style/QuestionStyle">
 
        <RadioButton
-           style="@style/QuestionStyle"
            android:id="@+id/question1answer1"
+           style="@style/QuestionStyle"
            android:text="@string/Finch"
            />
        <RadioButton
-           style="@style/QuestionStyle"
            android:id="@+id/question1answer2"
+           style="@style/QuestionStyle"
            android:text="@string/GreatTit"
            />
        <RadioButton
-           style="@style/QuestionStyle"
            android:id="@+id/question1answer3"
+           style="@style/QuestionStyle"
            android:text="@string/Goldfinch"
            />
        <RadioButton
-           style="@style/QuestionStyle"
            android:id="@+id/question1answer4"
+           style="@style/QuestionStyle"
            android:text="@string/Nuthach"
            />
 
@@ -51,7 +51,7 @@
     <!-- Second question -->
     <TextView
         style="@style/TextView_question"
-        android:text="@string/Question_picture"/>
+        android:text="@string/Question_2"/>
 
     <ImageView
         style="@style/Image" />
@@ -61,23 +61,23 @@
         style="@style/QuestionStyle">
 
         <RadioButton
-            style="@style/QuestionStyle"
             android:id="@+id/question2answer1"
+            style="@style/QuestionStyle"
             android:text="@string/Blackbird"
             />
         <RadioButton
-            style="@style/QuestionStyle"
             android:id="@+id/question2answer2"
+            style="@style/QuestionStyle"
             android:text="@string/Bluetit"
             />
         <RadioButton
-            style="@style/QuestionStyle"
             android:id="@+id/question2answer3"
+            style="@style/QuestionStyle"
             android:text="@string/Goldfinch"
             />
         <RadioButton
-            style="@style/QuestionStyle"
             android:id="@+id/question2answer4"
+            style="@style/QuestionStyle"
             android:text="@string/Starling"
 
             />
@@ -86,7 +86,7 @@
     <!-- Question 3 -->
     <TextView
         style="@style/TextView_question"
-        android:text="@string/Question_picture"/>
+        android:text="@string/Question_3"/>
 
     <ImageView
         style="@style/Image" />
@@ -96,58 +96,58 @@
         style="@style/QuestionStyle">
 
         <RadioButton
-            style="@style/QuestionStyle"
             android:id="@+id/question3answer1"
+            style="@style/QuestionStyle"
             android:text="@string/Bluetit"
             />
         <RadioButton
-            style="@style/QuestionStyle"
             android:id="@+id/question3answer2"
+            style="@style/QuestionStyle"
             android:text="@string/Goldfinch"
             />
         <RadioButton
-            style="@style/QuestionStyle"
             android:id="@+id/question3answer3"
+            style="@style/QuestionStyle"
             android:text="@string/Nuthach"
             />
         <RadioButton
-            style="@style/QuestionStyle"
             android:id="@+id/question3answer4"
+            style="@style/QuestionStyle"
             android:text="@string/Starling"
             />
     </RadioGroup>
 <!-- Question 4 -->
     <TextView
         style="@style/TextView_question"
-        android:text="@string/Question_checkbox"/>
+        android:text="@string/Question_4"/>
 
     <ImageView
         style="@style/Image" />
 
     <CheckBox
+        android:id="@+id/question4answer1"
         style="@style/QuestionStyle"
         android:text="@string/Blackbird"
-        android:id="@+id/question4answer1"
         />
     <CheckBox
+        android:id="@+id/question4answer2"
         style="@style/QuestionStyle"
         android:text="@string/Bluetit"
-        android:id="@+id/question4answer2"
         />
     <CheckBox
+        android:id="@+id/question4answer3"
         style="@style/QuestionStyle"
         android:text="@string/Finch"
-        android:id="@+id/question4answer3"
         />
     <CheckBox
+        android:id="@+id/question4answer4"
         style="@style/QuestionStyle"
         android:text="@string/Nuthach"
-        android:id="@+id/question4answer4"
         />
 <!-- Question 5 -->
     <TextView
         style="@style/TextView_question"
-        android:text="@string/Question_edittext"/>
+        android:text="@string/Question_5"/>
     <EditText
         android:id="@+id/question5answer"
         android:layout_width="match_parent"
@@ -155,13 +155,6 @@
         android:hint="@string/editSuggestion"/>
 
 <!-- Submit part -->
-    <TextView
-        android:id="@+id/score"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        />
-
     <RelativeLayout style="@style/Linear_layout">
 
         <Button
@@ -179,9 +172,9 @@
             android:text="@string/reset_button" />
 
         <Button
-            android:onClick="info"
             style="@style/button"
             android:layout_alignParentRight="true"
+            android:onClick="info"
             android:text="@string/info_button"/>
 
     </RelativeLayout>
