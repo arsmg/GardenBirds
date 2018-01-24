@@ -16,18 +16,21 @@
     <style name="TextView_first_page">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:padding">20dp</item>
-        <item name="android:textSize">22sp</item>
+        <item name="android:padding">@dimen/main_activity_start_text_padding</item>
+        <item name="android:textSize">@dimen/main_activity_start_text_size</item>
     </style>
 
     <style name="TextView_question">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">@dimen/question_text_size</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="Image">
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:layout_margin">@dimen/drawable_margin</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
     </style>
@@ -35,6 +38,7 @@
     <style name="QuestionStyle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/answer_text_size</item>
     </style>
 
     <style name="button">

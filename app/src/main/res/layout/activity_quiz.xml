@@ -19,7 +19,8 @@
         android:text="@string/Question_1"/>
 
     <ImageView
-        style="@style/Image" />
+        style="@style/Image"
+        android:src="@drawable/goldfinch"/>
 
    <RadioGroup
        android:id="@+id/firstQuestion"
@@ -54,6 +55,7 @@
         android:text="@string/Question_2"/>
 
     <ImageView
+        android:src="@drawable/bluetit"
         style="@style/Image" />
 
     <RadioGroup
@@ -89,6 +91,7 @@
         android:text="@string/Question_3"/>
 
     <ImageView
+        android:src="@drawable/greattit"
         style="@style/Image" />
 
     <RadioGroup
@@ -98,7 +101,7 @@
         <RadioButton
             android:id="@+id/question3answer1"
             style="@style/QuestionStyle"
-            android:text="@string/Bluetit"
+            android:text="@string/GreatTit"
             />
         <RadioButton
             android:id="@+id/question3answer2"
@@ -122,12 +125,13 @@
         android:text="@string/Question_4"/>
 
     <ImageView
+        android:src="@drawable/chaffinch_robbin"
         style="@style/Image" />
 
     <CheckBox
         android:id="@+id/question4answer1"
         style="@style/QuestionStyle"
-        android:text="@string/Blackbird"
+        android:text="@string/Robbin"
         />
     <CheckBox
         android:id="@+id/question4answer2"
@@ -148,6 +152,11 @@
     <TextView
         style="@style/TextView_question"
         android:text="@string/Question_5"/>
+
+    <ImageView
+        android:src="@drawable/blackbird"
+        style="@style/Image" />
+
     <EditText
         android:id="@+id/question5answer"
         android:layout_width="match_parent"

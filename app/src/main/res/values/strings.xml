@@ -3,16 +3,18 @@
 
     <!-- Species -->
     <string name="GreatTit">Great tit</string>
-    <string name="Nuthach">Nuthach</string>
+    <string name="Nuthach">Nuthatch</string>
     <string name="Finch">Chaffinch</string>
     <string name="Goldfinch">Goldfinch</string>
     <string name="Bluetit">Blue tit</string>
     <string name="Blackbird">Blackbird</string>
+    <string name="Robbin">Robbin</string>
     <string name="Starling">Starling</string>
 
     <!-- editText -->
     <string name="editSuggestion">Enter suggestion here</string>
     <string name="editTextRightAnswer">Turdus merula</string>
+    <string name="editTextRightAnswer2">turdus merula</string>
 
     <!-- First activity -->
     <string name="Welcome">Welcome to the Garden Birds of Europe Quiz!</string>

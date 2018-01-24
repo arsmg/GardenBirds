@@ -17,6 +17,15 @@ import android.widget.Toast;
 
 public class quiz_activity extends AppCompatActivity {
 
+    private final String QUESTION1 = "question1";
+    private final String QUESTION2 = "question2";
+    private final String QUESTION3 = "question3";
+    private final String QUESTION4_cb_1 = "checkbox1";
+    private final String QUESTION4_cb_2 = "checkbox2";
+    private final String QUESTION4_cb_3 = "checkbox3";
+    private final String QUESTION4_cb_4 = "checkbox4";
+    int basescore = 0;
+    int count = 0;
     private RadioGroup radioQuestion1;
     private RadioGroup radioQuestion2;
     private RadioGroup radioQuestion3;
@@ -26,24 +35,6 @@ public class quiz_activity extends AppCompatActivity {
     private CheckBox checkBox4;
     private EditText editText1;
     private Button submitButton;
-
-    private final String QUESTION1 = "question1";
-    private final String QUESTION2 = "question2";
-    private final String QUESTION3 = "question3";
-    private final String QUESTION4_cb_1 = "checkbox1";
-    private final String QUESTION4_cb_2 = "checkbox2";
-    private final String QUESTION4_cb_3 = "checkbox3";
-    private final String QUESTION4_cb_4 = "checkbox4";
-    private final String QUESTION5 = "edittext1";
-    private final String SUBMIT = "submit_btn";
-    private final String BASESCORE = "score";
-
-
-
-
-    int basescore = 0;
-    int count = 0;
-    int numberOfCheckboxesChecked = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +60,6 @@ public class quiz_activity extends AppCompatActivity {
             boolean q4_2 = savedInstanceState.getBoolean(QUESTION4_cb_2);
             boolean q4_3 = savedInstanceState.getBoolean(QUESTION4_cb_3);
             boolean q4_4 = savedInstanceState.getBoolean(QUESTION4_cb_4);
-            int score = savedInstanceState.getInt(BASESCORE);
             radioQuestion1.check(q1);
             radioQuestion2.check(q2);
             radioQuestion3.check(q3);
@@ -78,11 +68,7 @@ public class quiz_activity extends AppCompatActivity {
             checkBox3.setChecked(q4_3);
             checkBox4.setChecked(q4_4);
         }
-
-
-
-}
-
+    }
 
     // Setting the rules of the game to pop up as message
     public void info(View view) {
@@ -108,7 +94,7 @@ public class quiz_activity extends AppCompatActivity {
         alert.show();
     }
 
-        public void submitAnswer(View view) {
+    public void submitAnswer(View view) {
 
         count++;
 
@@ -156,13 +142,13 @@ public class quiz_activity extends AppCompatActivity {
         }
         RadioButton radioButton3 = (RadioButton) radioQuestion3.findViewById(question3_id);
         String answer3_text = (String) radioButton3.getText();
-        if (answer3_text.equalsIgnoreCase(getString(R.string.Bluetit))) {
+        if (answer3_text.equalsIgnoreCase(getString(R.string.GreatTit))) {
             count++;
             basescore++;
         }
 
 
-         //I am checking if the right answer to Question 4 was given
+        //I am checking if the right answer to Question 4 was given
         if (checkBox1.isChecked() && checkBox3.isChecked()) {
             count++;
             basescore += 2;
@@ -171,20 +157,20 @@ public class quiz_activity extends AppCompatActivity {
             basescore++;
         }
 
-        if (checkBox2.isChecked()){
+        if (checkBox2.isChecked()) {
             count++;
             basescore--;
         }
 
-        if (checkBox4.isChecked()){
-                count++;
-                basescore--;
-            }
+        if (checkBox4.isChecked()) {
+            count++;
+            basescore--;
+        }
 
         // I am checking if the right answer to Question 5 was given
         String edittexttest = editText1.getText().toString();
 
-        if (edittexttest.equalsIgnoreCase(getString(R.string.editTextRightAnswer))) {
+        if (edittexttest.equalsIgnoreCase(getString(R.string.editTextRightAnswer) )) {
             count++;
             basescore += 3;
         }
