@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView
+    android:background="@color/colorPrimaryDark"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -19,6 +19,7 @@
         android:text="@string/Question_1"/>
 
     <ImageView
+        android:contentDescription="@string/Goldfinch"
         style="@style/Image"
         android:src="@drawable/goldfinch"/>
 
@@ -49,12 +50,20 @@
 
    </RadioGroup>
 
+    <View
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/padding_10dp"
+    android:layout_marginTop="@dimen/padding_10dp"
+    android:background="@color/colorPrimaryDark"
+    />
+
     <!-- Second question -->
     <TextView
         style="@style/TextView_question"
         android:text="@string/Question_2"/>
 
     <ImageView
+        android:contentDescription="@string/Bluetit"
         android:src="@drawable/bluetit"
         style="@style/Image" />
 
@@ -85,12 +94,20 @@
             />
     </RadioGroup>
 
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/padding_10dp"
+        android:layout_marginTop="@dimen/padding_10dp"
+        android:background="@color/colorPrimaryDark"
+        />
+
     <!-- Question 3 -->
     <TextView
         style="@style/TextView_question"
         android:text="@string/Question_3"/>
 
     <ImageView
+        android:contentDescription="@string/GreatTit"
         android:src="@drawable/greattit"
         style="@style/Image" />
 
@@ -119,41 +136,59 @@
             android:text="@string/Starling"
             />
     </RadioGroup>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/padding_10dp"
+        android:layout_marginTop="@dimen/padding_10dp"
+        android:background="@color/colorPrimaryDark"
+        />
+
 <!-- Question 4 -->
     <TextView
         style="@style/TextView_question"
         android:text="@string/Question_4"/>
 
     <ImageView
+        android:contentDescription="@string/Robbin"
         android:src="@drawable/chaffinch_robbin"
         style="@style/Image" />
 
     <CheckBox
         android:id="@+id/question4answer1"
-        style="@style/QuestionStyle"
+        style="@style/checkbox"
         android:text="@string/Robbin"
         />
     <CheckBox
         android:id="@+id/question4answer2"
-        style="@style/QuestionStyle"
+        style="@style/checkbox"
         android:text="@string/Bluetit"
         />
     <CheckBox
         android:id="@+id/question4answer3"
-        style="@style/QuestionStyle"
+        style="@style/checkbox"
         android:text="@string/Finch"
         />
     <CheckBox
         android:id="@+id/question4answer4"
-        style="@style/QuestionStyle"
+        style="@style/checkbox"
         android:text="@string/Nuthach"
         />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/padding_10dp"
+        android:layout_marginTop="@dimen/padding_10dp"
+        android:background="@color/colorPrimaryDark"
+        />
+
 <!-- Question 5 -->
     <TextView
         style="@style/TextView_question"
         android:text="@string/Question_5"/>
 
     <ImageView
+        android:contentDescription="@string/Blackbird"
         android:src="@drawable/blackbird"
         style="@style/Image" />
 
@@ -161,7 +196,15 @@
         android:id="@+id/question5answer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_10dp"
         android:hint="@string/editSuggestion"/>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/padding_10dp"
+        android:layout_marginTop="@dimen/padding_10dp"
+        android:background="@color/colorPrimaryDark"
+        />
 
 <!-- Submit part -->
     <RelativeLayout style="@style/Linear_layout">
@@ -170,6 +213,7 @@
             android:id="@+id/submit"
             style="@style/button"
             android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:onClick="submitAnswer"
             android:text="@string/submit_button" />
 
@@ -183,6 +227,7 @@
         <Button
             style="@style/button"
             android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:onClick="info"
             android:text="@string/info_button"/>
 

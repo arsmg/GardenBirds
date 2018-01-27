@@ -9,6 +9,8 @@
     </style>
 
     <style name="Linear_layout">
+        <item name="android:background">@color/colorPrimaryLight</item>
+        <item name="android:layout_margin">@dimen/padding_10dp</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_width">match_parent</item>
     </style>
@@ -21,13 +23,17 @@
     </style>
 
     <style name="TextView_question">
+        <item name="android:textColor">@color/colorSecondaryText</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:textSize">@dimen/question_text_size</item>
+        <item name="android:paddingLeft">@dimen/padding_10dp</item>
+        <item name="android:paddingTop">@dimen/padding_10dp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
     <style name="Image">
+        <item name="android:background">@drawable/image_background</item>
         <item name="android:adjustViewBounds">true</item>
         <item name="android:scaleType">fitXY</item>
         <item name="android:layout_margin">@dimen/drawable_margin</item>
@@ -36,6 +42,17 @@
     </style>
 
     <style name="QuestionStyle">
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:paddingLeft">@dimen/padding_10dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/answer_text_size</item>
+    </style>
+
+    <style name="checkbox">
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:layout_marginLeft">@dimen/padding_10dp</item>
+        <item name="android:paddingLeft">@dimen/padding_10dp</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">@dimen/answer_text_size</item>

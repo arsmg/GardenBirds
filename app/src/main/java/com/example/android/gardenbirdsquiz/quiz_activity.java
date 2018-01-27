@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -42,15 +41,15 @@ public class quiz_activity extends AppCompatActivity {
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         setContentView(R.layout.activity_quiz);
 
-        radioQuestion1 = (RadioGroup) findViewById(R.id.firstQuestion);
-        radioQuestion2 = (RadioGroup) findViewById(R.id.secondQuestion);
-        radioQuestion3 = (RadioGroup) findViewById(R.id.thirdQuestion);
-        checkBox1 = (CheckBox) findViewById(R.id.question4answer1);
-        checkBox2 = (CheckBox) findViewById(R.id.question4answer2);
-        checkBox3 = (CheckBox) findViewById(R.id.question4answer3);
-        checkBox4 = (CheckBox) findViewById(R.id.question4answer4);
-        editText1 = (EditText) findViewById(R.id.question5answer);
-        submitButton = (Button) findViewById(R.id.submit);
+        radioQuestion1 = findViewById(R.id.firstQuestion);
+        radioQuestion2 = findViewById(R.id.secondQuestion);
+        radioQuestion3 = findViewById(R.id.thirdQuestion);
+        checkBox1 = findViewById(R.id.question4answer1);
+        checkBox2 = findViewById(R.id.question4answer2);
+        checkBox3 = findViewById(R.id.question4answer3);
+        checkBox4 = findViewById(R.id.question4answer4);
+        editText1 = findViewById(R.id.question5answer);
+        submitButton = findViewById(R.id.submit);
 
         if (savedInstanceState != null) {
             int q1 = savedInstanceState.getInt(QUESTION1);
@@ -108,7 +107,7 @@ public class quiz_activity extends AppCompatActivity {
         }
 
         // I am checking if the right answer to Question 1 was given
-        RadioButton radioButton1 = (RadioButton) radioQuestion1.findViewById(question1_id);
+        RadioButton radioButton1 = radioQuestion1.findViewById(question1_id);
         String answer1_text = (String) radioButton1.getText();
         if (answer1_text.equalsIgnoreCase(getString(R.string.Goldfinch))) {
             count++;
@@ -124,7 +123,7 @@ public class quiz_activity extends AppCompatActivity {
             basescore = 0;
             return;
         }
-        RadioButton radioButton2 = (RadioButton) radioQuestion2.findViewById(question2_id);
+        RadioButton radioButton2 = radioQuestion2.findViewById(question2_id);
         String answer2_text = (String) radioButton2.getText();
         if (answer2_text.equalsIgnoreCase(getString(R.string.Bluetit))) {
             count++;
@@ -140,7 +139,7 @@ public class quiz_activity extends AppCompatActivity {
             basescore = 0;
             return;
         }
-        RadioButton radioButton3 = (RadioButton) radioQuestion3.findViewById(question3_id);
+        RadioButton radioButton3 = radioQuestion3.findViewById(question3_id);
         String answer3_text = (String) radioButton3.getText();
         if (answer3_text.equalsIgnoreCase(getString(R.string.GreatTit))) {
             count++;
@@ -175,7 +174,7 @@ public class quiz_activity extends AppCompatActivity {
             basescore += 3;
         }
 
-        // Toast message with the score
+                // Toast message with the score
         Toast.makeText(this, getString(R.string.result_summery) + basescore, Toast.LENGTH_SHORT).show();
 
         // Switch off Submit button after first submit
