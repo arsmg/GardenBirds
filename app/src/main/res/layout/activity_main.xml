@@ -8,12 +8,6 @@
     tools:context="com.example.android.gardenbirdsquiz.MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Welcome"
-        />
-
-    <TextView
         android:id="@+id/picturesQuiz"
         style="@style/TextView_first_page"
         android:gravity="center"

@@ -237,6 +237,4 @@ public class quiz_activity extends AppCompatActivity {
         outState.putBoolean(QUESTION4_cb_3, checkBox3.isChecked());
         outState.putBoolean(QUESTION4_cb_4, checkBox4.isChecked());
     }
-
-
 }
